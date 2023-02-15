@@ -1,14 +1,16 @@
-class BankAccount:
-    def __init__(self, account_number, owners, balance):
-        self.account_number = account_number
-        self.owners = owners
+class cuentabancaria:
+    def __init__(self, numero_cuenta, propietarios, balance):
+        self.numero_cuenta = numero_cuenta
+        self.propietarios = propietarios
         self.balance = balance
 
-    def deposit(self, amount):
-        self.balance += amount
+    def depositar(self, monto):
+        self.balance += monto
+        print(f'Se han depositado {monto} en la cuenta. Nuevo balance: {self.balance}')
 
-    def withdraw(self, amount):
-        if amount > self.balance:
-            print("Insufficient funds.")
+    def retirar(self, monto):
+        if self.balance < monto:
+            print('Fondos insuficientes')
         else:
-            self.balance -= amount
+            self.balance -= monto
+            print(f'Se han retirado {monto} de la cuenta. Nuevo balance: {self.balance}')
