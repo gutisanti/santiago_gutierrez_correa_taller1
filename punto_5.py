@@ -1,14 +1,16 @@
-class Circle:
-    def __init__(self, center, radius):
-        self.center = center
-        self.radius = radius
+import math
+
+class circulo:
+    def __init__(self, centro, radio):
+        self.centro = centro
+        self.radio = radio
 
     def area(self):
-        return 3.14159 * self.radius ** 2
+        return math.pi * (self.radio ** 2)
 
-    def perimeter(self):
-        return 2 * 3.14159 * self.radius
+    def perimetro(self):
+        return 2 * math.pi * self.radio
 
-    def contains_point(self, point):
-        distance = ((point.x - self.center.x) ** 2 + (point.y - self.center.y) ** 2) ** 0.5
-        return distance <= self.radius
+    def punto_pertenece(self, punto):
+        distancia = math.sqrt((punto.x - self.centro.x) ** 2 + (punto.y - self.centro.y) ** 2)
+        return distancia <= self.radio

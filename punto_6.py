@@ -1,9 +1,9 @@
-class Card:
-    SUIT_HEARTS = 'Hearts'
-    SUIT_DIAMONDS = 'Diamonds'
-    SUIT_CLUBS = 'Clubs'
-    SUIT_SPADES = 'Spades'
+class carta:
+    corazon = 'corazón'
+    diamante = 'diamante'
+    trebol = 'trébol'
+    espada = 'espada'
 
-    def __init__(self, value, suit):
-        self.value = value
-        self.suit = suit
+    def __init__(self, valor, pinta):
+        self.valor = valor
+        self.pinta = pinta
