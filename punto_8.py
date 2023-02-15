@@ -1,8 +1,9 @@
-class BankAccount:
-    def __init__(self, account_number, owners, balance):
-        self.account_number = account_number
-        self.owners = owners
+class CuentaBancaria:
+    def __init__(self, numero_cuenta, propietarios, balance):
+        self.numero_cuenta = numero_cuenta
+        self.propietarios = propietarios
         self.balance = balance
 
-    def deposit(self, amount):
-        self.balance += amount
+    def depositar(self, monto):
+        self.balance += monto
+
